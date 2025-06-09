@@ -1,0 +1,11 @@
+<!-- res/drawable/ic_oil_barrel.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+ android:width="24dp"
+ android:height="24dp"
+ android:viewportWidth="24"
+ android:viewportHeight="24"
+ android:tint="?attr/colorControlNormal">
+ <path
+  android:fillColor="@android:color/white"
+  android:pathData="M20,13.15c0,-3.14 -2.57,-5.72 -5.71,-5.72 -0.56,0 -1.11,0.08 -1.63,0.24l-2.37,-2.37C11.13,4.44 12,2.24 12,0L4,0c0,2.24 0.87,4.44 2.29,6.13l1.58,1.58C6.01,8.38 5.1,10.15 5.1,12.15l0,1.35H2v3h3.1l0,1.35c0,2.67 2.16,4.83 4.83,4.83h0c2.67,0 4.83,-2.16 4.83,-4.83L15,17.5h6v-3h-3.9v-1.35zM12.93,17.5L12.93,17.5c-1.56,0 -2.83,-1.27 -2.83,-2.83l0,-2.67h5.66l0,2.67C15.76,16.23 14.49,17.5 12.93,17.5zM10.1,10.65h5.66v1.35H10.1V10.65z"/>
+</vector>

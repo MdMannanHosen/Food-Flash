@@ -1,0 +1,14 @@
+<!-- res/drawable/ic_bakery_dining.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+ android:width="24dp"
+ android:height="24dp"
+ android:viewportWidth="24"
+ android:viewportHeight="24"
+ android:tint="?attr/colorControlNormal">
+ <path
+  android:fillColor="@android:color/white"
+  android:pathData="M15.33,8.44C14.4,7.55 13.06,7 11.5,7c-1.4,0 -2.69,0.44 -3.69,1.22C6.66,9.15 5,11.36 5,14c0,2.76 2.24,5 5,5h1c2.76,0 5,-2.24 5,-5C16,11.83 15.76,10.12 15.33,8.44zM11.5,17.5c-1.93,0 -3.5,-1.57 -3.5,-3.5c0,-1.42 0.86,-2.65 2.1,-3.21C10.74,10.42 11.44,11 12.2,11h0.2c0.97,0 1.83,-0.67 2.19,-1.59c0.2,0.06 0.39,0.13 0.58,0.23C15.42,10.16 16,11.19 16,12.33c0,1.35 -0.68,2.56 -1.74,3.28C13.52,16.82 12.56,17.5 11.5,17.5z"/>
+ <path
+  android:fillColor="@android:color/white"
+  android:pathData="M11.5,4C10.12,4 8.8,4.55 7.79,5.54C8.75,4.54 10.1,4 11.5,4C12.89,4 14.24,4.54 15.2,5.54C14.19,4.55 12.87,4 11.5,4z"/>
+</vector>

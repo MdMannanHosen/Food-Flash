@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ android:orientation="vertical"
+ android:background="?attr/colorSurface"
+ tools:context=".CategoryProductDetails">
+
+ <!-- Product Image -->
+ <com.makeramen.roundedimageview.RoundedImageView
+  android:id="@+id/productImageView"
+  android:layout_width="match_parent"
+  android:layout_height="250dp"
+  android:scaleType="centerCrop"
+  android:src="@drawable/cat1"
+  app:riv_corner_radius="10dp" />
+
+ <!-- ScrollView for content -->
+ <ScrollView
+  android:layout_width="match_parent"
+  android:layout_height="0dp"
+  android:layout_weight="1"
+  android:padding="10dp">
+
+  <LinearLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:padding="16dp">
+
+   <!-- Product Name and Price -->
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+     android:id="@+id/tvProductName"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="Fresh Apple"
+     android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+     android:textStyle="bold" />
+
+    <TextView
+     android:id="@+id/tvProductPrice"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="$1.50"
+     android:textColor="?attr/colorPrimary"
+     android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+     android:textStyle="bold" />
+   </LinearLayout>
+
+
+
+
+   <!-- Rating -->
+   <RatingBar
+    android:id="@+id/ratingBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:numStars="5"
+    android:stepSize="0.1"
+    android:rating="4.5"
+    android:isIndicator="true"
+
+    />
+
+   <!-- Availability -->
+   <com.google.android.material.chip.Chip
+    android:id="@+id/chipAvailability"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="In Stock"
+    android:textColor="@android:color/white"
+    app:chipBackgroundColor="#4CAF50"
+    app:chipIcon="@drawable/ic_check_circle"
+    app:chipIconTint="@android:color/white" />
+
+   <!-- Category & Origin -->
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <TextView
+     android:id="@+id/tvCategory"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="Category: Fruits"
+     android:drawablePadding="8dp"
+     android:gravity="center_vertical"
+     android:textColor="?attr/colorOnSurface"
+     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+     app:drawableStartCompat="@drawable/ic_category" />
+
+    <TextView
+     android:id="@+id/tvOrigin"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="Origin: USA"
+     android:drawablePadding="8dp"
+     android:gravity="center_vertical"
+     android:textColor="?attr/colorOnSurface"
+     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+     app:drawableStartCompat="@drawable/ic_public" />
+   </LinearLayout>
+
+
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+     android:id="@+id/tvBrand"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="24dp"
+     android:text="Brand : "
+     android:textColor="?attr/colorOnSurface"
+     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+     app:drawableStartCompat="@drawable/ic_brand"
+     android:drawablePadding="8dp"
+
+     />
+
+    <TextView
+     android:id="@+id/tvBrandName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="10dp"
+     android:layout_marginTop="24dp"
+     android:text="প্রাণ ফ্রেশ"
+     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+     android:textColor="?attr/colorOnSurface" />
+
+
+   </LinearLayout>
+
+   <!-- Description -->
+   <TextView
+    android:id="@+id/tvDescriptionLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="Description"
+    android:textColor="?attr/colorOnSurface"
+    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+    android:textStyle="bold" />
+
+   <TextView
+    android:id="@+id/tvProductDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="A crisp and sweet red apple, perfect for a healthy snack. Rich in vitamins and fiber."
+    android:textColor="?attr/colorOnSurfaceVariant"
+    android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+   <!-- Nutrition Section -->
+   <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:padding="16dp">
+
+     <TextView
+      android:id="@+id/tvNutritionLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Nutrition Facts"
+      android:textColor="?attr/colorOnSurface"
+      android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+      android:textStyle="bold" />
+
+     <GridLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:columnCount="2"
+      android:layout_marginTop="16dp"
+      android:alignmentMode="alignMargins"
+      android:rowOrderPreserved="false">
+
+      <TextView
+       android:id="@+id/tvCalories"
+       android:text="Calories: 52"
+       android:layout_margin="8dp"
+       android:textColor="?attr/colorOnSurface"
+       android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+       app:drawableStartCompat="@drawable/ic_local_fire_department"
+       android:drawablePadding="4dp" />
+
+      <TextView
+       android:id="@+id/tvFat"
+       android:text="Fat: 0.2g"
+       android:layout_margin="8dp"
+       android:textColor="?attr/colorOnSurface"
+       android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+       app:drawableStartCompat="@drawable/ic_oil_barrel"
+       android:drawablePadding="4dp"
+       android:paddingStart="40dp"
+
+       />
+
+      <TextView
+       android:id="@+id/tvCarbs"
+       android:text="Carbs: 14g"
+       android:layout_margin="8dp"
+       android:textColor="?attr/colorOnSurface"
+       android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+       app:drawableStartCompat="@drawable/ic_bakery_dining"
+       android:drawablePadding="4dp" />
+
+      <TextView
+       android:id="@+id/tvProtein"
+       android:text="Protein: 0.3g"
+       android:layout_margin="8dp"
+       android:paddingStart="40dp"
+       android:textColor="?attr/colorOnSurface"
+       android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+       app:drawableStartCompat="@drawable/ic_fitness_center"
+       android:drawablePadding="4dp" />
+
+     </GridLayout>
+    </LinearLayout>
+   </com.google.android.material.card.MaterialCardView>
+
+
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- Quantity Selector -->
+    <LinearLayout
+     android:layout_width="0dp"
+     android:layout_height="40dp"
+     android:layout_weight="1"
+     android:background="@drawable/quantity_selector_bg"
+     android:gravity="center"
+     android:orientation="horizontal">
+
+     <ImageView
+      android:id="@+id/btnDecrease"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@drawable/ic_remove"
+      android:contentDescription="Decrease quantity"
+      android:padding="6dp" />
+
+     <TextView
+      android:id="@+id/tvQuantity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="1"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:paddingHorizontal="12dp" />
+
+     <ImageView
+      android:id="@+id/btnIncrease"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@drawable/ic_add"
+      android:contentDescription="Increase quantity"
+      android:padding="6dp" />
+    </LinearLayout>
+
+    <!-- Add to Cart Button -->
+    <Button
+     android:id="@+id/addToCartButton"
+     android:layout_width="0dp"
+     android:layout_height="40dp"
+     android:layout_marginStart="8dp"
+     android:layout_weight="1"
+     android:background="@drawable/button_primary_bg"
+     android:text="Add to Cart"
+     android:textAllCaps="false"
+     android:textColor="@color/white"
+     tools:ignore="TouchTargetSizeCheck" />
+   </LinearLayout>
+
+
+
+
+
+
+
+
+
+  </LinearLayout>
+ </ScrollView>
+
+
+
+</LinearLayout>

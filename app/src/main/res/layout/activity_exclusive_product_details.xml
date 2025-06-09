@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:tools="http://schemas.android.com/tools"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_marginEnd="7dp"
+ android:layout_marginBottom="5dp"
+ android:orientation="vertical"
+ android:background="@drawable/card_background"
+ app:cardCornerRadius="10dp">
+
+ <!-- Product Image -->
+
+ <!-- Discount Badge -->
+ <com.makeramen.roundedimageview.RoundedImageView
+  android:id="@+id/roundedImageCat1"
+  android:layout_width="match_parent"
+  android:layout_height="300dp"
+  android:scaleType="centerCrop"
+  android:src="@drawable/food1"
+  app:riv_corner_radius="10dip" />
+
+ <TextView
+  android:id="@+id/discountBadge"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="8dp"
+  android:layout_marginStart="8dp"
+  android:background="@drawable/discount_badge_bg"
+  android:paddingHorizontal="8dp"
+  android:paddingVertical="4dp"
+  android:text="15% OFF"
+  android:textColor="@color/white"
+  android:textSize="12sp"
+  android:textStyle="bold"
+
+  />
+
+ <!-- Product Info Container -->
+ <LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginStart="16dp"
+  android:orientation="vertical"
+  android:padding="8dp"
+  >
+
+  <!-- Title and Rating -->
+  <LinearLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:gravity="center_vertical"
+   android:orientation="horizontal"
+   >
+
+   <TextView
+    android:id="@+id/productTitle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Classic Margherita Pizza"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    />
+
+   <ImageView
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_marginEnd="4dp"
+    android:src="@drawable/start"
+    />
+
+   <TextView
+    android:id="@+id/productRating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="4.6"
+    android:textColor="@color/dark_gray"
+    android:textSize="14sp"
+
+    />
+  </LinearLayout>
+
+  <!-- Description -->
+  <TextView
+   android:id="@+id/productIngredients"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="4dp"
+   android:text="Pizza with tomato, mozzarella, and basil"
+   android:textColor="@color/gray"
+   android:textSize="14sp"
+   />
+
+  <!-- Category and Brand -->
+  <LinearLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="8dp"
+   android:orientation="horizontal">
+
+   <TextView
+    android:id="@+id/productCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_bg"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp"
+    android:text="Italian"
+    android:textColor="@color/primary_color"
+    android:textSize="12sp" />
+
+   <TextView
+    android:id="@+id/productBrand"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:text="Domino's"
+    android:textColor="@color/dark_gray"
+    android:textSize="12sp"
+    android:background="@drawable/category_bg"
+    android:padding="5dp"
+
+    />
+  </LinearLayout>
+
+  <!-- Price and Delivery -->
+  <LinearLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="12dp"
+   android:gravity="center_vertical"
+   android:orientation="horizontal">
+
+   <!-- Price with discount -->
+   <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+     android:id="@+id/productPrice"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="$5.40"
+     android:textColor="@color/black"
+     android:textSize="18sp"
+     android:textStyle="bold" />
+
+    <TextView
+     android:id="@+id/originalPrice"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="$6.35"
+     android:textColor="@color/gray"
+     android:textSize="12sp"
+     android:drawableLeft="@drawable/ic_line_through" />
+   </LinearLayout>
+
+   <!-- Delivery time -->
+   <TextView
+    android:id="@+id/deliveryTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:drawableLeft="@drawable/ic_delivery"
+    android:drawablePadding="4dp"
+    android:text="15 min"
+    android:textColor="@color/green"
+    android:textSize="14sp" />
+
+   <!-- Stock status -->
+   <TextView
+    android:id="@+id/stockStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:text="Available"
+    android:textColor="@color/green"
+    android:textSize="12sp" />
+  </LinearLayout>
+
+  <!-- Quantity Selector and Add to Cart Button -->
+  <LinearLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="12dp"
+   android:gravity="center_vertical"
+   android:orientation="horizontal">
+
+   <!-- Quantity Selector -->
+   <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_weight="1"
+    android:background="@drawable/quantity_selector_bg"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+     android:id="@+id/btnDecrease"
+     android:layout_width="30dp"
+     android:layout_height="30dp"
+     android:src="@drawable/ic_remove"
+     android:contentDescription="Decrease quantity"
+     android:padding="6dp" />
+
+    <TextView
+     android:id="@+id/tvQuantity"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="1"
+     android:textColor="@color/black"
+     android:textSize="16sp"
+     android:textStyle="bold"
+     android:paddingHorizontal="12dp" />
+
+    <ImageView
+     android:id="@+id/btnIncrease"
+     android:layout_width="30dp"
+     android:layout_height="30dp"
+     android:src="@drawable/ic_add"
+     android:contentDescription="Increase quantity"
+     android:padding="6dp" />
+   </LinearLayout>
+
+   <!-- Add to Cart Button -->
+   <Button
+    android:id="@+id/addToCartButton"
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="8dp"
+    android:layout_weight="1"
+    android:background="@drawable/button_primary_bg"
+    android:text="Add to Cart"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    tools:ignore="TouchTargetSizeCheck" />
+  </LinearLayout>
+ </LinearLayout>
+</LinearLayout>

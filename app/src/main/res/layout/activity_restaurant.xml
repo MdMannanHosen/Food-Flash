@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:id="@+id/main"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ tools:context=".RestaurantActivity"
+ >
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  >
+
+
+
+
+ <include
+  layout="@layout/custom_tolbar"
+  android:id="@+id/included"
+  />
+
+ <RelativeLayout
+  android:id="@+id/relativeLayout"
+  android:layout_width="match_parent"
+  android:layout_height="100dp"
+  android:background="#0dd60e64"
+  app:layout_constraintTop_toBottomOf="@id/included"
+  tools:ignore="MissingConstraints"
+  />
+
+ <TextView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="10dp"
+  android:text="FIRST ORDER voucher use and get 20% of on 100% or more.T&amp;C applied"
+  android:textColor="@color/purple_200"
+  android:textStyle="bold"
+  app:layout_constraintTop_toBottomOf="@id/included"
+  tools:ignore="MissingConstraints"
+   />
+
+
+ <ImageView
+  android:layout_width="50dp"
+  android:layout_height="50dp"
+  android:src="@drawable/foodpanadalogo"
+  app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+  app:layout_constraintEnd_toEndOf="parent"
+  tools:ignore="MissingConstraints"
+  android:padding="10dp"
+
+  />
+
+
+ <LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  tools:ignore="MissingConstraints"
+  app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+  android:layout_marginTop="10dp"
+  >
+
+  <androidx.recyclerview.widget.RecyclerView
+   android:id="@+id/rec_offer"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:layout_margin="10dp"
+   />
+
+
+  <TextView
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Panda Exclusive"
+   android:textColor="#000000"
+   android:textStyle="bold"
+   android:layout_marginTop="8dp"
+   android:paddingBottom="10dp"
+   android:paddingStart="10dp"
+   />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+   android:id="@+id/rec_exe"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10dp"
+   />
+
+
+  <TextView
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="All Restaurant"
+   android:textColor="#000000"
+   android:textStyle="bold"
+   android:layout_marginTop="8dp"
+   android:paddingBottom="10dp"
+   android:paddingStart="10dp"
+   />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+   android:id="@+id/rec_all_res"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10dp"
+   />
+
+
+ </LinearLayout>
+
+
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
